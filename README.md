@@ -1,5 +1,5 @@
 # php7-mssql
-Use old mssql functions with php7* based on PDO ans Sybase
+Use old mssql functions with php7* based on PDO and Sybase
 
 You requires php7.0-sybase
 
@@ -19,7 +19,7 @@ require 'mssql.php';
 define('MSSQL_HOST', '192.168.0.81');
 define('MSSQL_USER', 'test');
 define('MSSQL_PASSWORD', 'test');
-define('MSSQL_DATABASE', 'turista');
+define('MSSQL_DATABASE', 'test');
 
 $conection = mssql_connect(MSSQL_HOST, MSSQL_USER, MSSQL_PASSWORD);
 mssql_select_db(MSSQL_DATABASE, $conection);
@@ -37,7 +37,7 @@ require 'mssql.php';
 define('MSSQL_HOST', '192.168.0.81');
 define('MSSQL_USER', 'test');
 define('MSSQL_PASSWORD', 'test');
-define('MSSQL_DATABASE', 'turista');
+define('MSSQL_DATABASE', 'test');
 
 $db = new DB();
 
