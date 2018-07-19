@@ -26,6 +26,10 @@ if (!extension_loaded('mssql')) {
 
     }
 
+    /**
+     * @param $database
+     * @param $mssql_connect
+     */
     function mssql_select_db($database, &$mssql_connect)
     {
         global $globalPdoHostname, $globalPdoUser, $globalPdoPassword, $globalPdoConnection;
@@ -36,6 +40,10 @@ if (!extension_loaded('mssql')) {
         );
     }
 
+    /**
+     * @param $query
+     * @return string
+     */
     function mssql_query($query)
     {
         /** @var PDO $globalPdoConnection */
@@ -52,7 +60,11 @@ if (!extension_loaded('mssql')) {
         return $uniqueid;
     }
 
-
+    /**
+     * @param $stmId
+     * @param int $fetch_style
+     * @return mixed
+     */
     function mssql_fetch_assoc($stmId, $fetch_style = PDO::FETCH_ASSOC)
     {
         global $globalPdoStatements;
@@ -61,6 +73,10 @@ if (!extension_loaded('mssql')) {
         return $ret;
     }
 
+    /**
+     * @param $stmId
+     * @return mixed
+     */
     function mssql_num_rows($stmId)
     {
         global $globalPdoStatements;
@@ -69,6 +85,10 @@ if (!extension_loaded('mssql')) {
         return $ret;
     }
 
+    /**
+     * @param $stmId
+     * @return mixed
+     */
     function  mssql_fetch_object($stmId){
         return mssql_fetch_assoc($stmId, $fetch_style = PDO::FETCH_OBJ);
     }
